@@ -22,5 +22,5 @@ Fontawesome embedded (for icons): https://fontawesome.com/
 
 --IMPORTANT--:
 The site has been deployed in:
-1. Github repository: 
-2. Github Cloud hosting URL: 
+1. Github repository: https://github.com/ethar615/WebProject
+2. Cloud hosting URL(render): https://expressportfolio-6q5y.onrender.com 
