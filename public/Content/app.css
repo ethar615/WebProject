@@ -1,0 +1,11 @@
+/*Adding bachground image in css to all pages*/
+body {
+    background-image: url('/Assests/images/background.jpg');
+    background-size: cover; /* making sure that the image covers the entire screen */
+    background-position: center; /* centering the image */
+    background-repeat: no-repeat; /*prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+h4 {
+    color: rgb(231, 231, 197);
+}

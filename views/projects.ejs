@@ -1,0 +1,66 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+<style>
+    .project-title {
+        color: indigo;         
+        font-weight: 400; /*font weight for project titles */
+    }
+    
+</style>
+<!-- Main content -->
+<div class="container mt-5 project-title">
+    <h1 class="text-center"><%= title %></h1><!--shows title passed from the route -->
+    <h5 class="text-center"> Some of my completed projects</h5>
+<div class="row">
+    <!-- Java Projects -->
+    <div class="col-md-6">
+        <h2 class="mt-4">Java Projects</h2><!--header for java-->
+        <div class="card mb-3">
+            <div class="card-body">
+                <!-- title and their descriptions-->
+                <h5 class="card-title">Brick Breaker Game <i class="bi bi-gem"></i></h5>
+                <p class="card-text">The more you destroy the bricks, the more you score.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Attendance Management System <i class="bi bi-file-earmark-text"></i></h5>
+                <p class="card-text">It uses MySQL as a backend for database management.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Banking Application <i class="bi bi-wallet"></i></h5>
+                <p class="card-text">A simple banking operations like deposit, withdrawal, checking balance, exit, etc.</p>
+                
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Projects -->
+    <div class="col-md-6">
+        <h2 class="mt-4">Python Projects</h2><!--header for python-->
+        <div class="card mb-3">
+            <div class="card-body">
+                <!-- title and their descriptions-->
+                <h5 class="card-title">Advanced Calculator <i class="bi bi-calculator"></i></h5>
+                <p class="card-text">Calculates the unknown value of x and y.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Tic-Tac-Toe Game <i class="bi bi-controller"></i></h5>
+                <p class="card-text">Where 2 players compete to get first to 3 (x and o), used Tkinter.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Sudoku Solver <i class="bi bi-puzzle"></i></h5>
+                <p class="card-text">Solves a Sudoku puzzle in a matter of seconds.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<%- include Partials/footer.ejs %>

@@ -1,0 +1,79 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+<!-- customizing styles for the homepage layout, buttons, text, and social links -->
+<style>
+    .text-indigo {
+        color: #4B0082;
+    }
+    .btn-indigo {
+        background-color: #4B0082;
+        color: #ffffff;
+        border-radius: 50px; /* makes the button more circular */
+        padding: 10px 30px;
+        font-size: 1.2rem;
+    }
+    .btn-indigo:hover {
+        background-color: #3a006e;
+        color: #ffffff;
+    }
+    .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .home-text {
+        text-align: left;
+        max-width: 400px;
+    }
+    .home-text h2 {
+        font-size: 3.5rem;
+    }
+    .home-text h1 {
+        font-size: 4.5rem;
+    }
+    .profile-pic {
+        width: 300px; /*image sizing */
+        height: 300px;
+        border-radius: 100%;/*getting the pictures border to be a circle*/
+        object-fit: cover;
+    }
+    .social-links {
+        margin-top: 20px;
+    }
+    .social-links a {
+        color: #4B0082;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    .social-links a:hover {
+        color: #3a006e;
+    }
+</style>
+
+<!-- Main Content -->
+<br><br>
+<div class="container mt-5 home-content">
+    <div class="home-text">
+        <h2 class="display-4 mt-4">Hi There!</h2>
+        <h1 class="display-1 text-indigo">I'm Ethar</h1>
+        <p class="lead text-secondary">And This is My Portfolio</p>
+        <div class="mt-5">
+            <!-- button linking to the About Me page -->
+            <a href="/aboutme" class="btn btn-indigo btn-lg">Learn More About Me</a>
+        </div>
+        <!--fully functional social links -->
+        <div class="social-links">
+            <a href="https://linkedin.com/in/bba8a3323/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ethar615/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>  
+    <div>
+        <!--the profile picture displayed on the homepage -->
+        <img src="/Assests/images/pfp.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+</div>
+
+<%- include Partials/footer.ejs %>

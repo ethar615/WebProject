@@ -1,0 +1,42 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+<!--main content-->
+<!--changing the style and color of the title-->
+<style>
+    .about-me-title {
+        color: indigo;         
+        font-weight: 400;    
+    }
+</style>
+
+<div class="container mt-5">  <!--the main container for the About Me section-->
+    <div class="text-center"> <!--centering text-->
+        <h1 class="display-4 about-me-title">About Me</h1> 
+        <p class="lead text-secondary">Welcome to my portfolio!</p>
+    </div>
+    <div class="card mt-4 shadow-sm">
+        <div class="card-body bg-dark">
+            <p class="text-light"><!--light text color-->
+                My name is Ethar Almaghrabi, and I'm a second-year student at Ontario Tech University pursuing a degree in IT: Technology Management.
+            </p>
+            <p class="text-light">
+                I am passionate about technology and solving problems through code. In my spare time, I enjoy learning new programming languages and exploring the possibilities of artificial intelligence in different industries.
+            </p>
+            <p class="text-light">
+                In my free time, I enjoy photography, as well as cooking, hiking, and reading thriller/science fiction books.
+            </p>
+        <!-- About Me Video -->
+        <div class="text-center mt-4"> <!--centering section for the video-->
+            <h4 class="text-beige">A Video About Me <i class="bi bi-camera-reels"></i></h4><br>  <!--title with icon-->
+            <video controls width="80%" poster="/Assests/images/Poster.jpg">  <!--changing size of video and addinging poster-->
+                <source src="/Assests/images/ShortVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card-footer text-muted">
+            <small>Feel free to reach out to me using my contact me page!</small>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<%- include Partials/footer.ejs %>

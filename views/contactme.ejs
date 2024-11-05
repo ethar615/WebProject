@@ -1,0 +1,114 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+
+<style>
+    /* main container styling */
+    .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /*banner styling */
+    .contact-banner {
+        background-image: url('/Assests/images/banner.jpg');
+        background-size:auto; /*image auto covers the banner area */
+        background-position: center; /* centers the image */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem; /*rem allows the text to be responsive based on default browser*/
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 20px;
+    }
+
+    /* Input and label styling */
+    .contact-container label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #4B0082;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;/*rem allows the text to be responsive based on default browser*/
+    }
+
+    /*captcha styling */
+    .captcha-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /*submit button styling */
+    .submit-btn {
+        background-image: url('/Assests/images/banner.jpg'); 
+        background-size:auto; /* banner area */
+        background-position: center; /* centers the image */
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;/*rem : responsive text*/
+    }
+</style>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <h1 class="text-indigo text-center">Contact Me</h1>
+    <p class="text-center lead">Welcome to my Contact Me page</p>
+
+    <!-- Banner with text -->
+    <div class="contact-banner">
+        To personally contact me, use the following form:
+    </div>
+    <!--the form-->
+    <div class="contact-container">
+        <form action="/submit-contact" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Cell Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit cell no." pattern="[0-9]{10}" required>
+
+            <label for="captcha">What's 5+2? (Captcha Validator):</label>
+            <div class="captcha-container">
+                <input type="number" id="captcha" name="captcha" placeholder="Answer" required>
+            </div>
+
+            <label for="message">Get in Touch</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any questions, comments, or queries..." required></textarea>
+
+            <button type="submit" class="submit-btn">Submit  <i class="bi bi-heart"></i></button>
+        </form>
+    </div>
+</div>
+<!--This is a script to prevent the submission unless it passes the , validator-->
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const captchaInput = document.getElementById('captcha').value;
+        if (captchaInput !== '7') {
+            event.preventDefault(); // Prevent form submission
+            alert('Please enter the correct answer for the captcha (7).');
+        }
+    });
+</script>
+
+<br><br>
+
+<%- include Partials/footer.ejs %>
